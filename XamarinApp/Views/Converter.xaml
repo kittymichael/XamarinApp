@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Views.Converter"
+             NavigationPage.HasBackButton="False"
+             Visual="Material">
+    <Grid BackgroundColor="#fde07f">
+        <StackLayout VerticalOptions="Center"
+                     Margin="20"
+                     Spacing="10">
+            <Image Source="https://i.ibb.co/DDsfJY4/earth.png"
+                   Margin="20"/>
+
+            <Frame HasShadow="False"
+                   CornerRadius="15"
+                   BackgroundColor="#fff">
+                <Entry Keyboard="Numeric"
+                        BackgroundColor="#fff"
+                       TextColor="#000"
+                       Placeholder="centimeters (cm)"
+                       PlaceholderColor="#000"
+                       FontSize="Large"
+                       x:Name="txtcm"/>
+            </Frame>
+            <Button Text="converte"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    BackgroundColor="#7c50e9"
+                    x:Name="btnconvert"
+                    Clicked="btnconvert_Clicked"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Outcome"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="#000"/>
+                <Label Text="0.00"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       TextColor="#000"
+                       VerticalOptions="Center"
+                       x:Name="lbloutcome"/>
+                
+
+            </StackLayout>
+            <Button Text="go back"
+                    TextTransform="None"
+                    BackgroundColor="#7c50e9"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    x:Name="btnback"
+                    Clicked="btnback_Clicked"/>
+                   
+        </StackLayout>
+    </Grid>
+  </ContentPage>
